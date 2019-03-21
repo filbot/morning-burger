@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 25%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+}
+
+.page-header {
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+.mb-copy {
+  max-width: 500px;
+  margin-right: 50px;
+}
+
+.copy-heading {
+  font-size: 50px;
+}
+
+.copy-body {
+  font-size: 22px;
+  margin-block-end: 0.83em;
+}
+
+.mb-phone img {
+  height: 500px;
+  width: auto;
+}
