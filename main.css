@@ -32,7 +32,6 @@ body {
 .mb-copy {
   font-family: 'Open Sans', sans-serif;
   grid-area: copy;
-  max-width: 250px;
 }
 
 .mobile-icon img {
