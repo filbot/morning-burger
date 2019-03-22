@@ -2,55 +2,137 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-  color: #333;
+  color: #fff;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr minmax(800px, 800px) 1fr;
+  grid-template-columns: 1fr 280px 1fr;
   grid-template-areas:
     '.... header  ....'
     '.... content ....'
     '.... footer  ....';
+  background: rgb(205, 86, 145);
+  background: linear-gradient(
+    0deg,
+    rgba(205, 86, 145, 1) 0%,
+    rgba(248, 118, 104, 1) 35%,
+    rgba(248, 174, 104, 1) 100%
+  );
 }
 
 .page-header {
   font-family: 'Pacifico', cursive;
-  font-size: 26px;
+  font-size: 45px;
   grid-area: header;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.content {
+  grid-area: content;
 }
 
 .mb-copy {
   font-family: 'Open Sans', sans-serif;
   grid-area: copy;
-  max-width: 500px;
+  max-width: 250px;
+}
+
+.mobile-icon img {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
 }
 
 .copy-heading {
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .copy-body {
-  font-size: 22px;
+  font-size: 17px;
 }
 
-.content {
-  grid-area: content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.ios-app-badge img {
+  margin: 0 auto;
+}
+
+.badge-white {
+  display: block;
+}
+
+.badge-black {
+  display: none;
 }
 
 .mb-phone img {
-  height: 500px;
-  width: auto;
+  display: none;
 }
 
 .page-footer {
   grid-area: footer;
   font-size: 12px;
-  color: #777;
+  margin-bottom: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
+}
+
+@media only screen and (min-width: 850px) {
+  body {
+    color: #333;
+    background: #fff;
+    grid-template-columns: 1fr 800px 1fr;
+  }
+
+  .page-header {
+    margin: 0 20px;
+    justify-content: flex-start;
+    font-size: 35px;
+  }
+
+  .mobile-icon {
+    display: none;
+  }
+
+  .mb-copy {
+    font-size: 14px;
+    max-width: 500px;
+  }
+
+  .copy-heading {
+    font-size: 50px;
+  }
+
+  .copy-body {
+    font-size: 24px;
+  }
+
+  .content {
+    grid-area: content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mb-phone img {
+    display: block;
+    height: 500px;
+  }
+
+  .ios-app-badge img {
+    margin: 0;
+  }
+
+  .badge-white {
+    display: none;
+  }
+
+  .badge-black {
+    display: block;
+  }
+
+  .page-footer {
+    color: #777;
+  }
 }
